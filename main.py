@@ -28,7 +28,7 @@ while True:
     answer = "decimal number"
     question = input("2. What is a float in Python, JavaScript, Java, and Ruby? (even number/decimal number)  ").lower()
     if question == answer:
-        print("Correct! ")
+        print("Correct! 1+ ")
         score += 1
         break
     elif question == "even number":

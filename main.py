@@ -1,7 +1,6 @@
 print("Hi there! Welcome to Sohaila Ali's official game:) ")
 play = input("Do you want to play? ").lower()
-answer = "yes"
-if play == answer:
+if play == "yes":
     print("Okay, let's go! ")
 else:
     print("Alright, bye! ")
@@ -25,9 +24,8 @@ while True:
         continue
 
 while True:
-    answer = "decimal number"
-    question = input("2. What is a float in Python, JavaScript, Java, and Ruby? (even number/decimal number)  ").lower()
-    if question == answer:
+    question = input("2. What is a float in Python, JavaScript, Java, and Ruby? (Even Number/Decimal Number)  ").lower()
+    if question == "decimal number":
         print("Correct! 1+ ")
         score += 1
         break
@@ -39,9 +37,8 @@ while True:
         continue
 
 while True:
-    answer = "web development"
-    question = input("3. What is HTML used for? (Game development/web development/app development) ").lower()
-    if question == answer:
+    question = input("3. What is HTML used for? (Game Development/Web Development/App Development) ").lower()
+    if question == "web development":
         print("Correct! 1+")
         score += 1
         break
@@ -56,9 +53,8 @@ while True:
         continue
 
 while True:
-    answer = "object oriented programming"
     question = input("4. What does OOP stand for? (Out of Print/Object Oriented Programming/Out Of Place) ").lower()
-    if question == answer:
+    if question == "object oriented programming":
         print("Correct! 1+")
         score += 1
         break
@@ -73,13 +69,12 @@ while True:
         continue
 
 while True:
-    answer = "see-sharp"
-    question = input("5. How do you pronounce C#? (see-hashtag/see-sharp) ").lower()
-    if question == answer:
+    question = input("5. How do you pronounce C#? (See Hashtag/See Sharp) ").lower()
+    if question == "see sharp":
         print("Correct! 1+")
         score += 1
         break
-    elif question == "see-hashtag":
+    elif question == "see hashtag":
         print("Incorrect! It's see-sharp")
         break
     else:

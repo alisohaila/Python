@@ -1,22 +1,23 @@
 from lazyme.string import color_print # importing the module that helps display colors
-
+  
 print("Hi there! Welcome to this Trivia.")
 
 score = 0 # the score that will increase by 1 everytime the user answers correctly
 questions = 5 # the number of questions
 
+# a function that will be called whenever the user enters an invalid input
+
+def invalidInput():
+  color_print("Invalid Input", color = 'yellow')
+  
 while True:
     question = input("\n1. Is Python a creature or a programming language? \na) Programming language\nb) Creature\nAnswer: ").lower()
-    if question == "programming language":
-        color_print("Correct! It is both actually 1+", color = 'green')
-        score += 1 # increasing the score value by 1
-        break
-    elif question == "creature":
+    if question == "programming language" or question == "creature":
         color_print("Correct! It is both actually 1+", color = 'green')
         score += 1 # increasing the score value by 1
         break # breaking out of the loop if answered correctly
     else:
-        color_print("Invalid Input", color = 'yellow')
+        invalidInput() # calling the invalidInput() function
         continue # continuing the loop if entered an invalid input
 
 while True:
@@ -29,7 +30,7 @@ while True:
         color_print("Incorrect! It is decimal number.", color='red')
         break
     else:
-        color_print("Invalid Input", color = 'yellow')
+        invalidInput()
         continue
 
 while True:
@@ -38,14 +39,11 @@ while True:
         color_print("Correct! 1+", color='green')
         score += 1
         break
-    elif question == "game development":
-        color_print("Incorrect! It is Web development. ", color='red')
-        break
-    elif question == "app development":
+    elif question == "game development" or question == "app development":
         color_print("Incorrect! It is Web development. ", color='red')
         break
     else:
-        color_print("Invalid Input", color = 'yellow')
+        invalidInput()
         continue
 
 while True:
@@ -54,14 +52,11 @@ while True:
         color_print("Correct! 1+", color='green')
         score += 1
         break
-    elif question == "out of print":
-        color_print("Incorrect! It is Object Oriented Programming.", color='red')
-        break
-    elif question == "out of place":
+    elif question == "out of print" or question == "out of place":
         color_print("Incorrect! It is Object Oriented Programming.", color='red')
         break
     else:
-        color_print("Invalid Input", color = 'yellow')
+        invalidInput()
         continue
 
 while True:
@@ -71,10 +66,10 @@ while True:
         score += 1
         break
     elif question == "see hashtag":
-        color_print("Incorrect! It's see-sharp.", color='red')
+        color_print("Incorrect! It is see-sharp.", color='red')
         break
     else:
-        color_print("Invalid Input", color = 'yellow')
+        invalidInput()
         continue
 
 # printing out the scores in numbers and percentage
